@@ -1,0 +1,15 @@
+server.port: 8080
+
+spring:
+  application:
+    name: LogTest
+  sleuth:
+    baggage-keys:
+      - baggage
+      - key
+    log.slf4j.whitelisted-mdc-keys:
+      - key
+
+
+logging.level.org.springframework.cloud.sleuth: DEBUG
+
