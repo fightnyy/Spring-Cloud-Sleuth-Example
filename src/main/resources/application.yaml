@@ -10,6 +10,7 @@ spring:
     log.slf4j.whitelisted-mdc-keys:
       - key
 
-
 logging.level.org.springframework.cloud.sleuth: DEBUG
 
+# bootstrap.yml is not necessary anymore
+logging.pattern.level: "%5p [${spring.zipkin.service.name:${spring.application.name:}},%X{traceId:-},%X{spanId:-},%X{sampled:-},%X{key:-}]"
